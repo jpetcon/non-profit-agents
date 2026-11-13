@@ -1,0 +1,24 @@
+gateway:
+  name: shared-tool-gateway
+  host: 127.0.0.1
+  port: 9000
+custom_tools:
+  get_strategy:
+    handler: tools.custom_tools.master_brand.get_strategy
+    description: Retrieve the charity's strategy and mission.
+  get_brand_profile:
+    handler: tools.custom_tools.master_brand.get_brand_profile
+    description: Retrieve the organisation's Masterbrand profile.
+  get_target_audience:
+    handler: tools.custom_tools.master_brand.get_target_audience
+    description: Retrieve the charity's target audience.
+  get_brand_voice:
+    handler: tools.custom_tools.master_brand.get_brand_voice
+    description: Retrieve the organisation's writing guidance.
+http_tools: {}
+mcp_servers:
+  brave:
+    transport: stdio
+    command: npx
+    args: [-y, '@brave/brave-search-mcp-server@2.1.4', --transport, stdio]
+    env_vars: [BRAVE_API_KEY]

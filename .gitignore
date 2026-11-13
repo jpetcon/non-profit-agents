@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.adk/
+**/.adk/
+.local/
+.pytest_cache/
+test-results/
+playwright-report/

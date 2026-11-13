@@ -1,0 +1,41 @@
+{
+  "version": "uk-charity-2026.11.6",
+  "validation_floor": "maintained-read-connectors-and-resource-boundaries-v6",
+  "sources_reviewed": "2026-11-04",
+  "rules": {
+    "access.assignment": "This capability is not assigned to this agent and team.",
+    "access.scope": "Your organisation's access settings do not permit this capability.",
+    "activity.disabled": "Enable this activity in Guardrails before using it.",
+    "data.destination": "This service is not approved for the conversation's data.",
+    "tool.changed": "The connected capability changed and needs an access review.",
+    "tool.arguments": "The action differs from the permitted fields, targets or batch size.",
+    "tool.update_scope": "Automatic updates need a fixed target and permitted fields.",
+    "tool.value": "The action exceeds its permitted GBP value.",
+    "mode.drafts_only": "Draft-only mode prevents consequential actions.",
+    "approval.required": "Review this exact action before it can execute.",
+    "model.processing_evidence": "Personal-data processing needs an approved purpose, provider terms and transfer arrangements.",
+    "charity.purpose": "A reviewed charitable purpose is required for this activity.",
+    "charity.marketing_evidence": "Sending requires recipient records, sender identity and an unsubscribe mechanism.",
+    "charity.suppression": "A recipient lacks eligibility evidence or must not be contacted.",
+    "charity.soft_opt_in": "The recorded charitable-purpose soft opt-in conditions are incomplete.",
+    "charity.campaign": "An approved campaign and publication review are required.",
+    "charity.financial_evidence": "Approved fund, recipient and due-diligence evidence are required.",
+    "charity.financial_target": "The actual fund and recipient must match their reviewed evidence.",
+    "charity.financial_value": "Financial actions must expose their GBP value for limit enforcement.",
+    "charity.dual_authorisation": "Independent authorisation evidence is required outside this single-user app."
+  },
+  "packs": [
+    {"id": "baseline", "name": "Core security", "category": "product", "always_on": true},
+    {"id": "research", "name": "Research and drafting", "category": "organisation", "always_on": true},
+    {"id": "fundraising", "name": "Responsible fundraising", "category": "law_and_regulatory_guidance", "source": "https://www.fundraisingregulator.org.uk/code/index"},
+    {"id": "beneficiary_data", "name": "Beneficiary information", "category": "law_and_organisation", "source": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/"},
+    {"id": "safeguarding", "name": "Safeguarding", "category": "regulatory_guidance", "always_on": true},
+    {"id": "campaigning", "name": "Campaigning and publication", "category": "law_and_regulatory_guidance"},
+    {"id": "finance", "name": "Funds and financial actions", "category": "law_and_regulatory_guidance", "source": "https://www.gov.uk/government/publications/internal-financial-controls-for-charities-cc8/internal-financial-controls-for-charities"}
+  ],
+  "jurisdictions": {
+    "england_wales": {"name": "England and Wales", "regulator": "Charity Commission", "source": "https://www.gov.uk/guidance/safeguarding-and-protecting-people-for-charities-and-trustees"},
+    "scotland": {"name": "Scotland", "regulator": "OSCR", "source": "https://www.oscr.org.uk/managing-a-charity/managing-charity-trustees/charities-and-campaigning-on-political-issues-guidance/"},
+    "northern_ireland": {"name": "Northern Ireland", "regulator": "CCNI", "source": "https://www.charitycommissionni.org.uk/guidance-a-to-z/charity-and-politics/"}
+  }
+}

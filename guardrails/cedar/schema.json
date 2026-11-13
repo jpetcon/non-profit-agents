@@ -1,0 +1,285 @@
+{
+  "Kindred": {
+    "entityTypes": {
+      "Agent": {
+        "shape": {
+          "type": "Record",
+          "attributes": {}
+        }
+      },
+      "Capability": {
+        "shape": {
+          "type": "Record",
+          "attributes": {
+            "name": {
+              "type": "String"
+            },
+            "kind": {
+              "type": "String"
+            },
+            "classification": {
+              "type": "String"
+            },
+            "workflow": {
+              "type": "String"
+            }
+          }
+        }
+      }
+    },
+    "actions": {
+      "Execute": {
+        "appliesTo": {
+          "principalTypes": [
+            "Agent"
+          ],
+          "resourceTypes": [
+            "Capability"
+          ],
+          "context": {
+            "type": "Record",
+            "attributes": {
+              "assigned": {
+                "type": "Boolean"
+              },
+              "scope_allowed": {
+                "type": "Boolean"
+              },
+              "workflow_enabled": {
+                "type": "Boolean"
+              },
+              "data_allowed": {
+                "type": "Boolean"
+              },
+              "schema_current": {
+                "type": "Boolean"
+              },
+              "arguments_valid": {
+                "type": "Boolean"
+              },
+              "autonomous_update_valid": {
+                "type": "Boolean"
+              },
+              "value_within_limit": {
+                "type": "Boolean"
+              },
+              "needs_review": {
+                "type": "Boolean"
+              },
+              "approved": {
+                "type": "Boolean"
+              },
+              "draft_only": {
+                "type": "Boolean"
+              },
+              "provider_terms": {
+                "type": "Boolean"
+              },
+              "purpose_approved": {
+                "type": "Boolean"
+              },
+              "has_recipients": {
+                "type": "Boolean"
+              },
+              "sender_matches": {
+                "type": "Boolean"
+              },
+              "recipients_eligible": {
+                "type": "Boolean"
+              },
+              "soft_opt_in_valid": {
+                "type": "Boolean"
+              },
+              "campaign_approved": {
+                "type": "Boolean"
+              },
+              "fund_approved": {
+                "type": "Boolean"
+              },
+              "due_diligence": {
+                "type": "Boolean"
+              },
+              "financial_target_matches": {
+                "type": "Boolean"
+              },
+              "value_known": {
+                "type": "Boolean"
+              },
+              "dual_authorisation_valid": {
+                "type": "Boolean"
+              }
+            }
+          }
+        }
+      },
+      "RequestReview": {
+        "appliesTo": {
+          "principalTypes": [
+            "Agent"
+          ],
+          "resourceTypes": [
+            "Capability"
+          ],
+          "context": {
+            "type": "Record",
+            "attributes": {
+              "assigned": {
+                "type": "Boolean"
+              },
+              "scope_allowed": {
+                "type": "Boolean"
+              },
+              "workflow_enabled": {
+                "type": "Boolean"
+              },
+              "data_allowed": {
+                "type": "Boolean"
+              },
+              "schema_current": {
+                "type": "Boolean"
+              },
+              "arguments_valid": {
+                "type": "Boolean"
+              },
+              "autonomous_update_valid": {
+                "type": "Boolean"
+              },
+              "value_within_limit": {
+                "type": "Boolean"
+              },
+              "needs_review": {
+                "type": "Boolean"
+              },
+              "approved": {
+                "type": "Boolean"
+              },
+              "draft_only": {
+                "type": "Boolean"
+              },
+              "provider_terms": {
+                "type": "Boolean"
+              },
+              "purpose_approved": {
+                "type": "Boolean"
+              },
+              "has_recipients": {
+                "type": "Boolean"
+              },
+              "sender_matches": {
+                "type": "Boolean"
+              },
+              "recipients_eligible": {
+                "type": "Boolean"
+              },
+              "soft_opt_in_valid": {
+                "type": "Boolean"
+              },
+              "campaign_approved": {
+                "type": "Boolean"
+              },
+              "fund_approved": {
+                "type": "Boolean"
+              },
+              "due_diligence": {
+                "type": "Boolean"
+              },
+              "financial_target_matches": {
+                "type": "Boolean"
+              },
+              "value_known": {
+                "type": "Boolean"
+              },
+              "dual_authorisation_valid": {
+                "type": "Boolean"
+              }
+            }
+          }
+        }
+      },
+      "Discover": {
+        "appliesTo": {
+          "principalTypes": [
+            "Agent"
+          ],
+          "resourceTypes": [
+            "Capability"
+          ],
+          "context": {
+            "type": "Record",
+            "attributes": {
+              "assigned": {
+                "type": "Boolean"
+              },
+              "scope_allowed": {
+                "type": "Boolean"
+              },
+              "workflow_enabled": {
+                "type": "Boolean"
+              },
+              "data_allowed": {
+                "type": "Boolean"
+              },
+              "schema_current": {
+                "type": "Boolean"
+              },
+              "arguments_valid": {
+                "type": "Boolean"
+              },
+              "autonomous_update_valid": {
+                "type": "Boolean"
+              },
+              "value_within_limit": {
+                "type": "Boolean"
+              },
+              "needs_review": {
+                "type": "Boolean"
+              },
+              "approved": {
+                "type": "Boolean"
+              },
+              "draft_only": {
+                "type": "Boolean"
+              },
+              "provider_terms": {
+                "type": "Boolean"
+              },
+              "purpose_approved": {
+                "type": "Boolean"
+              },
+              "has_recipients": {
+                "type": "Boolean"
+              },
+              "sender_matches": {
+                "type": "Boolean"
+              },
+              "recipients_eligible": {
+                "type": "Boolean"
+              },
+              "soft_opt_in_valid": {
+                "type": "Boolean"
+              },
+              "campaign_approved": {
+                "type": "Boolean"
+              },
+              "fund_approved": {
+                "type": "Boolean"
+              },
+              "due_diligence": {
+                "type": "Boolean"
+              },
+              "financial_target_matches": {
+                "type": "Boolean"
+              },
+              "value_known": {
+                "type": "Boolean"
+              },
+              "dual_authorisation_valid": {
+                "type": "Boolean"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

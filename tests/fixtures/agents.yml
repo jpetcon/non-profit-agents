@@ -1,0 +1,25 @@
+root: coordinator
+default_team: charity_team
+teams:
+  charity_team:
+    display_name: Charity team
+    description: Charity strategy and influencer research.
+    root: coordinator
+agents:
+  coordinator:
+    description: Coordinates charity strategy lookups and influencer research.
+    instruction: Delegate strategy tasks to strategy_agent and research to influencer_search_agent.
+    models: [reasoning, fast, backup]
+    sub_agents: [strategy_agent, influencer_search_agent]
+  strategy_agent:
+    description: Retrieves charity strategy and Masterbrand context.
+    instruction: Use the assigned tools to retrieve charity context.
+    models: [fast, backup]
+    tools: [get_strategy, get_brand_profile, get_target_audience, get_brand_voice]
+    mode: single_turn
+  influencer_search_agent:
+    description: Finds relevant influencers using Brave Search.
+    instruction: Research influencers using Brave Search and cite your sources.
+    models: [reasoning, fast, backup]
+    tools: [brave_brave_web_search]
+    mode: single_turn

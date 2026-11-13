@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f6f7f3"><title>Kindred — Agent studio</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230d6358'/%3E%3Cpath d='M10 8v16m1-8L23 8M11 16l12 8' stroke='white' stroke-width='3' fill='none'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/app.css"><script src="/static/guardrails.js" defer></script><script src="/static/chat_setup.js" defer></script><script src="/static/mcp_auth.js" defer></script><script src="/static/mcp_setup.js" defer></script>
+  <script src="/static/connector_setup.js" defer></script><script src="/static/sandbox.js" defer></script><script src="/static/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <aside id="sidebar">
+    <a class="wordmark" href="#overview"><span class="brandmark">k<span>·</span></span><span>kindred<small>YOUR AGENT STUDIO</small></span></a>
+    <div class="team-switcher-wrap"><label for="team-switcher">CURRENT TEAM</label><select id="team-switcher" aria-label="Current team"></select></div>
+    <p class="nav-label">WORKSPACE</p>
+    <nav aria-label="Main navigation" id="nav"></nav>
+    <div class="sidebar-bottom"><div class="local-indicator"><span class="dot"></span> Local workspace</div><p>Settings and chats are saved<br>on this computer.</p><div id="sidebar-services"></div></div>
+  </aside>
+  <div class="shell">
+    <header><button class="icon-button mobile-menu" id="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button><div class="breadcrumb"><span id="workspace-name">Workspace</span> <span>/</span> <strong id="crumb">Overview</strong></div><div class="header-right"><button class="button ghost small" data-action="guard-stop">Emergency stop</button><span class="local-pill">On this device</span><span class="avatar" aria-label="Personal workspace">Y</span></div></header>
+    <aside id="approval-tray" class="approval-tray" aria-label="Action approvals" aria-live="polite" hidden></aside>
+    <main id="main" tabindex="-1"><div class="loading"><span class="brandmark">k·</span><h1>Loading your workspace</h1><p>Connecting to your local workspace…</p></div></main>
+    <footer>Kindred agent manager<span>App running on this computer</span></footer>
+  </div>
+  <dialog id="editor" aria-labelledby="dialog-title"><form id="editor-form"><div class="dialog-heading"><div><p class="eyebrow" id="dialog-kicker">WORKSPACE</p><h2 id="dialog-title">Edit</h2></div><button type="button" class="icon-button" id="close-editor" aria-label="Close editor">×</button></div><div id="editor-fields"></div><p id="form-error" role="alert"></p><div class="dialog-actions"><button type="button" class="button secondary" id="cancel-editor">Cancel</button><button type="submit" class="button" id="save-editor">Save changes</button></div></form></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+[project]
+name = "non-profit-agents"
+version = "0.1.0"
+description = "AI agent templates for the charity and non-profit sector"
+license = "Apache-2.0"
+requires-python = ">=3.11"
+dependencies = [
+    "google-adk[extensions,mcp]==2.13.0",
+    "fastmcp>=4,<5",
+    "litellm>=1.84,<2",
+    "pydantic>=2,<3",
+    "pyyaml>=6,<7",
+    "fastapi>=0.162,<1",
+    "uvicorn>=0.54,<1",
+    "httpx>=0.28,<1",
+    "python-dotenv>=1.2,<2",
+    "aiosqlite>=0.22,<1",
+    "markdown-it-py>=4,<5",
+    "bleach>=6.2,<7",
+    "psutil>=7,<8",
+    "jsonschema>=4,<5",
+    "cedarpy==4.12.2",
+    "cryptography>=46,<51",
+    "pypdf>=6.21.4,<7",
+    "nodejs-wheel==24.19.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "pytest-asyncio>=1,<2", "playwright>=1.56,<2"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "function"

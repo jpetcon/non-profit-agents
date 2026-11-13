@@ -1,0 +1,65 @@
+version: 3
+sandbox:
+  enabled: false
+  connections: {}
+monthly_token_limit: 10000000
+per_run_token_limit: 5000000
+daily_token_limit: 5000000
+jurisdictions:
+- england_wales
+- scotland
+- northern_ireland
+mode: cautious
+activities:
+  fundraising: true
+  beneficiary_data: false
+  campaigning: true
+  finance: false
+safeguarding_contact: ''
+access:
+  webpageretrieval_fetch_page:
+    classification: read
+    schema_hash: 07b5abf3b5b9316eb6d9f1c935dd0d650f84f0649ab7cf3d22040d8f44838165
+    configuration_hash: 0c3285bdd835ae1e3a5843b4b0ca7f3a9449426fa8854814e983cf8f3a36df0f
+    input_schema:
+      type: object
+      properties:
+        url:
+          type: string
+          maxLength: 2048
+      required:
+      - url
+      additionalProperties: false
+    output_schema:
+      type: object
+      additionalProperties: true
+    description: Retrieve public HTTPS pages with source citations. No sign-in or
+      browser automation.
+    source_data_class: public
+    approved_data_classes:
+    - public
+    autonomous: false
+    permitted_fields: []
+    fixed_arguments: {}
+    target_fields:
+    - target_id
+    max_items: 1
+    max_value_gbp: '0'
+    value_field: amount_gbp
+    declared_cost_gbp: '0'
+    calls_per_day: 100
+    targets: []
+    charity_workflow: none
+    recipients_field: recipients
+    campaign_reference: ''
+    fund_reference: ''
+    purpose_reference: ''
+    fund_field: fund_id
+    financial_recipient_field: recipient_id
+    recipient_reference: ''
+    due_diligence_reference: ''
+    independent_authorisation_reference: ''
+    requires_dual_authorisation: false
+    idempotency_field: ''
+approved_connections: {}
+blocked_tools: []

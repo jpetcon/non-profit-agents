@@ -1,0 +1,31 @@
+# Temporary development setting: global OpenRouter routing is enabled.
+model_list:
+- model_name: agent-fast
+  litellm_params:
+    model: openrouter/z-ai/glm-5.3-flash
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    extra_body:
+      provider:
+        sort: price
+        require_parameters: true
+- model_name: agent-powerful
+  litellm_params:
+    model: openrouter/anthropic/claude-haiku-5.5
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    extra_body:
+      provider:
+        sort: price
+        require_parameters: true
+- model_name: agent-backup
+  litellm_params:
+    model: openrouter/deepseek/deepseek-v4-flash-0731
+    api_base: https://openrouter.ai/api/v1
+    api_key: os.environ/OPENROUTER_API_KEY
+    extra_body:
+      provider:
+        sort: price
+        require_parameters: true
+general_settings:
+  master_key: os.environ/LITELLM_MASTER_KEY

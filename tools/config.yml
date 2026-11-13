@@ -1,0 +1,71 @@
+gateway:
+  name: shared-tool-gateway
+  host: 127.0.0.1
+  port: 9000
+custom_tools:
+  get_strategy:
+    handler: tools.custom_tools.master_brand.get_strategy
+    description: Get the charity's strategy
+  get_brand_profile:
+    handler: tools.custom_tools.master_brand.get_brand_profile
+    description: Get the charity's name, mission and values
+  get_target_audience:
+    handler: tools.custom_tools.master_brand.get_target_audience
+    description: Get the charity's target audience
+  get_brand_voice:
+    handler: tools.custom_tools.master_brand.get_brand_voice
+    description: Get the charity's voice and communication guidelines
+http_tools: {}
+mcp_servers:
+  brave:
+    transport: stdio
+    command: npx
+    args:
+    - -y
+    - '@brave/brave-search-mcp-server@2.1.4'
+    - --transport
+    - stdio
+    env_vars:
+    - BRAVE_API_KEY
+  webpageretrieval:
+    display_name: Web page retrieval
+    enabled: true
+    transport: native
+    url: ''
+    token_env: ''
+    header_secrets: {}
+    command: ''
+    args: []
+    env_vars: []
+    env_secrets: {}
+    native:
+      provider: web
+      options: {}
+      secret_refs: {}
+      resources:
+      - public_https
+      capabilities:
+      - pages
+    managed:
+      preset: web
+      revision: 2026-11-06.1
+  googledrive:
+    display_name: Google Drive
+    enabled: true
+    transport: native
+    url: ''
+    token_env: ''
+    header_secrets: {}
+    command: ''
+    args: []
+    env_vars: []
+    env_secrets: {}
+    native:
+      provider: google_drive
+      options: {}
+      secret_refs: {}
+      resources: []
+      capabilities: []
+    managed:
+      preset: google_drive
+      revision: 2026-11-06.1

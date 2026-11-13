@@ -1,0 +1,11 @@
+gateway:
+  url: http://localhost:4000
+models:
+  fast:
+    model_type: agent-fast
+    display_name: Fast & efficient
+  reasoning:
+    model_type: agent-powerful
+    display_name: Deeper reasoning
+  backup:
+    model_type: agent-backup
