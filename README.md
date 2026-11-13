@@ -3,7 +3,7 @@
 Kindred is a private, single-user workspace for creating and using AI teams in a
 charity or nonprofit. It brings agents, organisational guidance, research tools,
 connected services, safety controls, usage limits, and conversations into one
-browser interface running on your computer. If you are looking for a managed, secure, multi-user service, I would highly recommedn somehting like AWS Bedrock, Google Vertex AI or Azure AI Foundry. 
+browser interface running on your computer. If you are looking for a managed, secure, multi-user service, I would highly recommend something like AWS Bedrock, Google Vertex AI or Azure AI Foundry. 
 
 This README has two parts:
 
